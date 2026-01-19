@@ -1,0 +1,56 @@
+# Quick Reference: Environment Variables for Netlify
+
+Copy and paste these directly into Netlify's environment variables section.
+Add each variable separately (click "Add a variable" 11 times).
+
+## Variable 1
+Key: VITE_FIREBASE_API_KEY
+Value: AIzaSyBCliSQ-KqbJxG9ouqK17HoE0lh0rOsc5g
+
+## Variable 2
+Key: VITE_FIREBASE_AUTH_DOMAIN
+Value: architech-wize-ai-c2e5f.firebaseapp.com
+
+## Variable 3
+Key: VITE_FIREBASE_PROJECT_ID
+Value: architech-wize-ai-c2e5f
+
+## Variable 4
+Key: VITE_FIREBASE_STORAGE_BUCKET
+Value: architech-wize-ai-c2e5f.firebasestorage.app
+
+## Variable 5
+Key: VITE_FIREBASE_MESSAGING_SENDER_ID
+Value: 1067058791718
+
+## Variable 6
+Key: VITE_FIREBASE_APP_ID
+Value: 1:1067058791718:web:493aa68fb2e130a4faade7
+
+## Variable 7
+Key: VITE_FIREBASE_MEASUREMENT_ID
+Value: G-CXDC5EWKP8
+
+## Variable 8
+Key: VITE_SUPABASE_URL
+Value: https://nfkvudvcomoqsugobvzg.supabase.co
+
+## Variable 9
+Key: VITE_SUPABASE_ANON_KEY
+Value: sb_publishable_U4TraXRF5X-hVSoyvmKEgA_lDA5FT7B
+
+## Variable 10
+Key: VITE_CLOUDINARY_CLOUD_NAME
+Value: dzquhmn5j
+
+## Variable 11
+Key: VITE_CLOUDINARY_UPLOAD_PRESET
+Value: architechwize_unsigned
+
+---
+
+AFTER adding all variables:
+1. Go to Deploys tab
+2. Click "Trigger deploy" → "Deploy site"
+3. Wait 3 minutes
+4. Refresh your site

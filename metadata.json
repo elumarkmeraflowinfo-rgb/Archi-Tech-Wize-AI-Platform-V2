@@ -1,0 +1,9 @@
+{
+  "name": "ArchiTech-Wize AI",
+  "description": "A bright, hopeful, futuristic AI & technology education platform empowering Africa and the world.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation",
+    "camera"
+  ]
+}

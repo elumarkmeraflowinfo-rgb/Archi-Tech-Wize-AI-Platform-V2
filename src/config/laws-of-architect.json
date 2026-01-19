@@ -1,0 +1,52 @@
+{
+    "principles": [
+        {
+            "id": "feasibility",
+            "name": "Market Feasibility",
+            "description": "The business plan must demonstrate realistic market demand and achievable goals",
+            "weight": 0.25,
+            "criteria": [
+                "Market size is quantified with data",
+                "Target audience is clearly defined",
+                "Competition analysis is present",
+                "Market entry strategy is realistic"
+            ]
+        },
+        {
+            "id": "execution",
+            "name": "Execution Clarity",
+            "description": "The plan must have clear, actionable steps with timeline and resources",
+            "weight": 0.25,
+            "criteria": [
+                "Specific milestones are defined",
+                "Resource requirements are listed",
+                "Timeline is realistic",
+                "Roles and responsibilities are clear"
+            ]
+        },
+        {
+            "id": "financial",
+            "name": "Financial Viability",
+            "description": "Revenue model and cost structure must be sound and sustainable",
+            "weight": 0.25,
+            "criteria": [
+                "Revenue streams are identified",
+                "Cost structure is estimated",
+                "Break-even analysis exists",
+                "Funding requirements are clear"
+            ]
+        },
+        {
+            "id": "risk",
+            "name": "Risk Assessment",
+            "description": "Major risks must be identified with mitigation strategies",
+            "weight": 0.25,
+            "criteria": [
+                "Key risks are identified",
+                "Mitigation strategies exist",
+                "Contingency plans are mentioned",
+                "Regulatory/legal considerations addressed"
+            ]
+        }
+    ]
+}
