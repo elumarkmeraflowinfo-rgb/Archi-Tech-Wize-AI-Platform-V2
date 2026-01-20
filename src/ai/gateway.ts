@@ -9,7 +9,7 @@ import { telemetry } from './telemetry';
 import { jobQueue } from './queue';
 // We will import the adapter map later. For now, we assume a global functionality or dynamic import.
 // To avoid circular dependency, we might inject the map or use a lookup helper.
-import { getProviderAdapter } from '../providers/index'; // This will exist later
+import { getProviderAdapter } from './providers';
 
 export class AiGateway {
 
