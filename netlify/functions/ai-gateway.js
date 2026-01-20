@@ -16,8 +16,8 @@ const HF_MODELS = {
   text: [
     'meta-llama/Llama-3.3-70B-Instruct',         // Performance King
     'Qwen/Qwen2.5-72B-Instruct',                 // High Stability
-    'meta-llama/Llama-3.2-3B-Instruct',          // Fast/Small
-    'mistralai/Mistral-7B-Instruct-v0.3'         // Legacy Reliable
+    'mistralai/Mistral-7B-Instruct-v0.3',        // Legacy Reliable
+    'google/gemma-2-27b-it'                      // Strong Alternative
   ],
   code: [
     'Qwen/Qwen2.5-Coder-32B-Instruct',           // Top Tier Coder
@@ -45,12 +45,12 @@ const HF_MODELS = {
     'microsoft/speecht5_tts'
   ],
   music: [
-    'facebook/musicgen-small',
-    'facebook/musicgen-medium'
+    'facebook/musicgen-medium',
+    'facebook/musicgen-small'
   ],
   analysis: [
     'meta-llama/Llama-3.3-70B-Instruct',
-    'google/gemma-2-27b-it'
+    'Qwen/Qwen2.5-72B-Instruct'
   ]
 };
 
@@ -81,7 +81,7 @@ async function tryHfGeneration(hf, category, input, options = {}) {
             { role: "system", content: currentOptions.systemInstruction || "You are a helpful AI assistant." },
             { role: "user", content: input }
           ],
-          max_tokens: options.max_tokens || 1024,
+          max_tokens: options.max_tokens || 2048,
           temperature: 0.7
         });
         return result.choices[0].message.content;
@@ -209,8 +209,11 @@ export const handler = async (event, context) => {
 
     // --- EXECUTION ---
 
-    // 1. GEMINI (Legacy/Fast Text) - Only if specifically preferred or standard 'text' mode
-    if (['text', 'agent-build', 'research', 'analyze', 'vibe-check'].includes(mode)) {
+    // 1. GEMINI (Legacy/Fast Text) - OPTIONAL/DISABLED BY DEFAULT
+    // Set useGemini to true only if you strictly want to use it. Now defaulting to HF.
+    const useGemini = false;
+
+    if (useGemini && ['text', 'agent-build', 'research', 'analyze', 'vibe-check'].includes(mode)) {
       try {
         // If HF is requested specifically or if Gemini fails later, we might switch, 
         // but for now 'text' defaults to Gemini for speed if available.

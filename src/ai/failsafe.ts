@@ -2,7 +2,7 @@ import { AiTaskType, AiResponse } from './types';
 
 const FAILSAFE_MESSAGES: Record<string, string> = {
     'default': "I'm having trouble connecting to my neural network right now. I'm secure and operational, but I can't generate new creative thoughts at the moment. Please try again in 1 minute.",
-    'REALTIME_CHAT': "I'm offline right now. I can still help you navigate the system, but I can't chat until my connection is restored.",
+    'REALTIME_CHAT': "I am currently unable to reach the neural network. Please try again in a moment.",
     'CODE_GENERATION': "// Connection to verification server lost.\n// Please check your network or try again later.",
 };
 
